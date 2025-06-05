@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Replikasi Virus: Daur Litik & Lisogenik</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ANIMASI VIRUS -->
+  <canvas id="virus-bg"></canvas>
+
+  <div class="container">
+    <h1><i class="fas fa-virus"></i> Replikasi Virus</h1>
+    <div class="nav">
+      <button class="nav-btn active" onclick="showPage('beranda', this)"><i class="fas fa-home"></i> Beranda</button>
+      <button class="nav-btn" onclick="showPage('materi', this)"><i class="fas fa-book"></i> Materi</button>
+    </div>
+
+    <!-- Beranda -->
+    <div id="beranda" class="content active">
+      <h2>Selamat Datang!</h2>
+      <p>
+        Website ini membahas <b>Replikasi Virus</b> melalui dua siklus utama: <b>Daur Litik</b> dan <b>Daur Lisogenik</b>.
+        <br><br>
+        <i class="fas fa-virus"></i> Pelajari proses, tonton video, dan uji pemahamanmu melalui kuis interaktif!
+      </p>
+      <div style="text-align:center;margin-top:30px;">
+        <img src="WhatsApp Image 2025-06-05 at 07.00.33_d2ce3781.jpg" alt="virus" style="max-width:600px;width:60%;box-shadow:0 2px 16px #b39ddb77;">
+      </div>
+    </div>
+
+    <!-- Materi -->
+    <div id="materi" class="content">
+      <div class="tabs">
+        <button class="tab active" onclick="showTab('litik', this)">Daur Litik</button>
+        <button class="tab" onclick="showTab('lisogenik', this)">Daur Lisogenik</button>
+      </div>
+
+      <!-- Daur Litik -->
+      <div id="litik" class="content active">
+        <h2><i class="fas fa-skull-crossbones"></i> Daur Litik</h2>
+        <div class="stage">
+          <h3>1. Adsorpsi</h3>
+          <p>Virus menempel pada permukaan sel inang.</p>
+          <video controls><source src="adsorbsi.mp4" type="video/mp4"></video>
+          <div class="quiz">
+            <p>Apa yang terjadi saat adsorpsi?</p>
+            <button onclick="alert('Benar! Virus menempel pada sel inang.')">Virus menempel</button>
+            <button onclick="alert('Kurang tepat! Ini terjadi di tahap penetrasi.')">Virus menyuntikkan DNA</button>
+          </div>
+        </div>
+        <div class="stage">
+          <h3>2. Penetrasi</h3>
+          <p>Virus menyuntikkan materi genetik ke dalam sel.</p>
+          <video controls><source src="Injeksi.mp4" type="video/mp4"></video>
+          <div class="quiz">
+            <p>Materi apa yang dimasukkan ke sel?</p>
+            <button onclick="alert('Benar! Materi genetik.')">Materi genetik</button>
+            <button onclick="alert('Salah! Protein tidak masuk.')">Protein virus</button>
+          </div>
+        </div>
+        <div class="stage">
+          <h3>3. Replikasi</h3>
+          <p>Materi genetik virus menggandakan diri dalam sel.</p>
+          <video controls><source src="Replikasi.mp4" type="video/mp4"></video>
+          <div class="quiz">
+            <p>Apa yang terjadi pada tahap ini?</p>
+            <button onclick="alert('Tepat! Virus mereplikasi diri.')">Replikasi materi virus</button>
+            <button onclick="alert('Kurang tepat! Ini terjadi nanti.')">Pecahnya sel inang</button>
+          </div>
+        </div>
+        <div class="stage">
+          <h3>4. Perakitan</h3>
+          <p>Komponen virus baru dirakit dalam sel inang.</p>
+          <video controls><source src="Perakitan.mp4" type="video/mp4"></video>
+          <div class="quiz">
+            <p>Apa tujuan perakitan?</p>
+            <button onclick="alert('Benar! Membentuk virus baru.')">Merakit virus baru</button>
+            <button onclick="alert('Tidak tepat.')">Memecah sel inang</button>
+          </div>
+        </div>
+        <div class="stage">
+          <h3>5. Lisis</h3>
+          <p>Sel inang pecah dan virus baru keluar.</p>
+          <video controls><source src="Lisis.mp4" type="video/mp4"></video>
+          <div class="quiz">
+            <p>Apa yang terjadi pada sel inang saat lisis?</p>
+            <button onclick="alert('Benar! Sel pecah dan virus keluar.')">Pecah dan virus keluar</button>
+            <button onclick="alert('Kurang tepat!')">DNA sel rusak saja</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Daur Lisogenik -->
+      <div id="lisogenik" class="content">
+        <h2><i class="fas fa-dna"></i> Daur Lisogenik</h2>
+        <div class="stage">
+          <h3>1. Adsorpsi & Penetrasi</h3>
+          <p>Virus masuk ke dalam sel inang.</p>
+          <video controls><source src="Adsorbsi&injeksi.mp4" type="video/mp4"></video>
+          <div class="quiz">
+            <p>Fungsi tahap ini?</p>
+            <button onclick="alert('Tepat! Materi virus masuk ke sel.')">Memasukkan materi virus</button>
+            <button onclick="alert('Kurang tepat!')">Menghancurkan sel</button>
+          </div>
+        </div>
+        <div class="stage">
+          <h3>2. Integrasi</h3>
+          <p>Materi genetik virus bergabung dengan DNA sel.</p>
+          <video controls><source src="Integrasi.mp4" type="video/mp4"></video>
+          <div class="quiz">
+            <p>Apa itu profag?</p>
+            <button onclick="alert('Benar! Materi virus dalam DNA sel.')">DNA virus di DNA sel</button>
+            <button onclick="alert('Kurang tepat!')">Enzim virus</button>
+          </div>
+        </div>
+        <div class="stage">
+          <h3>3. Replikasi bersama DNA sel</h3>
+          <p>Virus tetap pasif dalam DNA saat sel membelah.</p>
+          <video controls><source src="Replikasi Pasif.mp4" type="video/mp4"></video>
+          <div class="quiz">
+            <p>Apa yang dilakukan virus?</p>
+            <button onclick="alert('Tepat! Menyebar pasif dalam DNA.')">Membelah bersama sel</button>
+            <button onclick="alert('Tidak tepat.')">Langsung merusak sel</button>
+          </div>
+        </div>
+        <div class="stage">
+          <h3>4. Induksi</h3>
+          <p>Virus aktif kembali dan masuk ke fase litik.</p>
+          <video controls><source src="Induksi.mp4" type="video/mp4"></video>
+          <div class="quiz">
+            <p>Apa yang terjadi saat induksi?</p>
+            <button onclick="alert('Benar! Virus mulai aktif.')">Virus aktif dan menyerang</button>
+            <button onclick="alert('Kurang tepat.')">Virus tetap pasif</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #e1f5fe, #fce4ec);
+  min-height: 100vh;
+  position: relative;
+}
+#virus-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.4;
+}
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+h1 {
+  text-align: center;
+  color: #4a148c;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: 0 2px 10px #fff8;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.nav-btn {
+  background: #fff;
+  color: #8e24aa;
+  border: 2px solid #8e24aa;
+  border-radius: 25px;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 10px #dec4e7aa;
+}
+.nav-btn.active, .nav-btn:hover {
+  background: #8e24aa;
+  color: #fff;
+  border-color: #6a1b9a;
+  box-shadow: 0 4px 16px #b39ddb99;
+}
+.tabs {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.tab {
+  background: #ba68c8;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+.tab.active, .tab:hover {
+  background: #6a1b9a;
+}
+.content {
+  display: none;
+}
+.content.active {
+  display: block;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #bbb;
+  animation: fadeIn 0.7s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.stage {
+  margin-bottom: 30px;
+}
+video, img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.quiz {
+  background: #f3e5f5;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.quiz button {
+  margin: 5px;
+  padding: 10px;
+  background: #8e24aa;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.quiz button:hover {
+  background: #6a1b9a;
+}
+.hidden {
+  display: none;
+}
+/* Responsive */
+@media (max-width: 600px) {
+  .container { padding: 10px; }
+  h1 { font-size: 1.3em; }
+  .nav-btn { font-size: 14px; padding: 8px 14px;}
+}
